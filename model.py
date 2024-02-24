@@ -103,6 +103,7 @@ class NoDenseCategoricalProbabilityDistributionType(ProbabilityDistributionType)
     def sample_dtype(self):
         return tf.int64
 
+#used for "binary" and "zelda"
 class FullyConvPolicyBigMap(ActorCriticPolicy):
     def __init__(self, sess, ob_space, ac_space, n_env, n_steps, n_batch, **kwargs):
         super(FullyConvPolicyBigMap, self).__init__(sess, ob_space, ac_space, n_env, n_steps, n_batch, **kwargs)
@@ -129,7 +130,7 @@ class FullyConvPolicyBigMap(ActorCriticPolicy):
 
     def value(self, obs, state=None, mask=None):
         return self.sess.run(self.value_flat, {self.obs_ph: obs})
-
+#used for sokoban 
 class FullyConvPolicySmallMap(ActorCriticPolicy):
     def __init__(self, sess, ob_space, ac_space, n_env, n_steps, n_batch, **kwargs):
         super(FullyConvPolicySmallMap, self).__init__(sess, ob_space, ac_space, n_env, n_steps, n_batch, **kwargs)
