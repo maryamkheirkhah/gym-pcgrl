@@ -27,9 +27,14 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-
 # Tensorboard Logs
 runs/
+graphs/
+graphs1/
+models/
+my_models/
+real-100-runs/
+sokoban-200/
 
 # Jupyter logs
 .ipynb_checkpoints/
